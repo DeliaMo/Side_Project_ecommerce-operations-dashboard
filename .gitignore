@@ -1,0 +1,25 @@
+# # Data
+# *.csv
+# *.xlsx
+
+# Word
+*.docx
+!實際操作紀錄.docx
+
+# Environment
+.env
+
+# Python
+__pycache__/
+.ipynb_checkpoints/
+
+# Tableau
+*.hyper
+*.tde
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

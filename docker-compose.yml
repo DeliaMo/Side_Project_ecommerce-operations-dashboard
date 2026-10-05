@@ -1,0 +1,20 @@
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: ecommerce-mysql
+    # restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=ecommerce
+      - MYSQL_USER=delia
+      - MYSQL_PASSWORD=123456
+    ports:
+      - "3306:3306"
+    volumes:
+          - ecommerce-mysql_data:/var/lib/mysql
+          - ./sql:/docker-entrypoint-initdb.d:ro
+    command: 
+          --character-set-server=utf8mb4
+          --collation-server=utf8mb4_0900_ai_ci
+volumes:
+  ecommerce-mysql_data:
